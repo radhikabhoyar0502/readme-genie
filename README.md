@@ -47,3 +47,13 @@ This tool is built to help:
 
 ```bash
 npm install -g readme-genie
+
+```
+## 📖 Usage
+
+Once installed, navigate to your project directory and run:
+
+```bash
+readme-genie
+```
+
