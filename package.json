@@ -1,6 +1,6 @@
 {
   "name": "readme-genie",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "📄 Generate beautiful, intelligent READMEs automatically from your project codebase.",
   "bin": {
     "readme-genie": "./bin/cli.js"
