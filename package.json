@@ -1,6 +1,10 @@
 {
   "name": "readme-genie",
+<<<<<<< Updated upstream
   "version": "1.0.3",
+=======
+  "version": "1.1.1",
+>>>>>>> Stashed changes
   "description": "📄 Generate beautiful, intelligent READMEs automatically from your project codebase.",
   "bin": {
     "readme-genie": "./bin/cli.js"
