@@ -1,59 +1,94 @@
-# ✨ readme-genie
+# 🚀 Readme-genie
 
-> 🧙‍♂️ Your magical assistant to generate beautifully structured, highly contextual `README.md` files — just by scanning your codebase.
-
-[![npm version](https://img.shields.io/npm/v/readme-genie.svg)](https://www.npmjs.com/package/readme-genie)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
+📄 Generate beautiful, intelligent READMEs automatically from your project codebase.
 
 ---
 
-## 📌 What is readme-genie?
 
-`readme-genie` is a CLI tool that **automatically generates a clean, meaningful, and personalized `README.md` file** for your JavaScript or TypeScript project — without you writing a single line of it.
+## 🔄 Project Flow
 
-This tool is built to help:
+    1. Install dependencies with `npm install`.
+2. Run the development server with `your-start-command`.
+3. Explore the folder structure.
+4. Modify or extend your components as needed.
+5. Generate your README anytime with `npx readme-genie`.
 
-- 🧑‍💻 **Developers** who hate writing repetitive documentation  
-- 🚀 **Startup teams** that need quick onboarding files  
-- 🤖 **Open-source contributors** who want instantly useful `README.md` scaffolds  
-- 📦 **Project maintainers** who want consistent documentation across repos
-
-> Unlike typical generators, `readme-genie` actually **analyzes your code**, infers the **project’s flow**, detects **core logic**, and **structures your project visually**.
 
 ---
 
-## 🎯 Key Features
-
-✅ Automatically detects:
-- 🧠 Function names and arguments  
-- 🗂️ Folder structure (excluding `node_modules`, `.git`, etc.)  
-- 📄 Index/entry points, config files, helpers, and utils  
-- 🚫 Skips deeply nested irrelevant files or oversized folders
-
-✅ Intelligent heuristics:
-- Infers purpose of files (`api`, `utils`, `config`, `controllers`, etc.)  
-- Highlights meaningful files in the project root  
-- Folders with names longer than 20 characters are ignored by default for better clarity
-
-✅ DX-first design:
-- ⚡ Just run one command, get a professional-grade README  
-- 💬 Generates a **custom overview and project flow** per project  
-- 🧩 Injects project name directly from `package.json`  
-- 📎 Adds setup and install instructions customized to your repo
-
----
-
-## 🚀 Installation
+## ⚙️ Installation & Setup
 
 ```bash
-npm install -g readme-genie
-
-```
-## 📖 Usage
-
-Once installed, navigate to your project directory and run:
-
-```bash
-readme-genie
+git clone <your-repo-url>
+cd readme-genie
+npm install
+npx readme-genie
 ```
 
+---
+
+## 📁 Folder & File Structure
+
+```
+├── .gitignore├── .npmignore├── autocomplete.tsx├── bin/
+├── index.js├── LICENSE├── package-lock.json├── package.json├── PUBLISHING.md├── QUICKSTART.md├── README.md├── src/
+├── test-props.tsx
+```
+
+---
+
+## 🧠 File Purposes & Detected Functions
+
+### `src\analyze.js`
+**Purpose:** Code analysis and parsing logic
+
+**Functions:**
+- `extractJSDocComment(node)` — Extracts j s doc comment
+- `extractPropsFromParams(params, interfacesMap, typeAliasMap)` — Extracts props from params
+- `extractTypeAnnotation(typeAnnotation)` — Extracts type annotation
+- `isReactComponent(node, content)` — Checks if react component
+- `analyzeProject(dir)` — Analyzes project
+
+---
+
+### `src\generate.js`
+**Purpose:** Content generation and formatting
+
+**Functions:**
+- `getProjectMetadata()` — Retrieves project metadata
+- `formatFolderStructure(dir, prefix, root)` — Formats folder structure
+- `inferFilePurpose(filename)` — Infers file purpose
+- `inferFunctionPurpose(functionName, description)` — Infers function purpose
+- `generateReadme({...}, targetFolder)` — Generates readme
+
+
+
+## 🧩 React Components
+
+### `MUIAutocomplete`
+**File:** `autocomplete.tsx`  
+**Type:** Arrow Function Component
+
+| Prop | Type | Required |
+|------|------|----------|
+| `onChange` | `any` | ❌ |
+| `onInputChange` | `any` | ❌ |
+
+---
+
+### `TestComponent`
+**File:** `test-props.tsx`  
+**Type:** Arrow Function Component
+
+| Prop | Type | Required |
+|------|------|----------|
+| `name` | `string` | ✅ |
+| `age` | `number` | ✅ |
+| `email` | `string` | ❌ |
+
+
+---
+
+## 🙌 Credits
+
+Generated with ❤️ by [readme-genie]. Feel free to customize this file further to suit your unique project! Happy coding! 🤗
